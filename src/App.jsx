@@ -46,14 +46,26 @@ function App() {
     setTasks(newTasks);
   }
 
+  function onAddTask(title, desc) {
+    const nTask = {
+      id: tasks.length + 1,
+      title,
+      desc,
+      completed: false
+    }
+
+    setTasks([...tasks, nTask]);
+    console.log([...tasks, nTask])
+  }
+
   return (
-    <div className="w-screen h-screen bg-gray-900 flex flex-col items-center text-gray-100">
-      <h1 className="text-6xl text-center font-medium font-stack text-shadow-lg text-shadow-black m-10">
-        A Modern <span className="bg-linear-to-r text-blue-500">React</span> To
+    <div className="w-full min-h-screen space-y-12 py-12 bg-linear-to-b from-gray-800 to-gray-950 flex flex-col items-center text-gray-100">
+      <h1 className="text-6xl text-center font-medium font-stack text-shadow-lg text-shadow-black">
+        A Modern <span className="text-blue-500">React</span> To
         Do List
       </h1>
-      <div className="w-full flex flex-col items-center gap-1">
-        <AddTask />
+      <div className="w-full flex flex-col items-center gap-2 mb-20">
+        <AddTask onAddTask={onAddTask} />
         {tasks.length > 0 ? (
           <> {/* React Fragment - é uma tag vazia (<>) que só serve para envolver outras */}
             <TaskList
@@ -64,6 +76,9 @@ function App() {
             />
             <p className="text-xs text-gray-500 hover:cursor-default">
               Right click to show task details
+            </p>
+            <p className="text-xs text-gray-500 hover:cursor-default -mt-1.5">
+              Ctrl + click &#x2022; <span className="text-red-600/90">Delete task</span>
             </p>
           </>
         ) : (

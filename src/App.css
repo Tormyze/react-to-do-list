@@ -4,3 +4,5 @@
 @theme {
   --font-stack: "Stack Sans Notch", sans-serif;
 }
+
+html {scrollbar-width: none}
