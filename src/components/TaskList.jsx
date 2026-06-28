@@ -7,7 +7,7 @@ function TaskList({ tasks, onTaskClick, onDetailsClick, onDeleteClick }) {
         <li key={task.id} className="group">
           <div onContextMenu={(e) => e.preventDefault()} onClick={(e) => e.ctrlKey && onDeleteClick(task.id)} className='flex justify-between'>
             <button onContextMenu={() => onDetailsClick(task.id)} onClick={() => onTaskClick(task.id)}
-              className={`py-1 pl-2 border-l-2 border-gray-500 group-hover:border-blue-500 group-hover:border-l-3 group-hover:cursor-pointer group-active:border-cyan-500 group-active:text-gray-400 w-full text-start transition-all duration-40 ${task.completed && "line-through border-green-500 hover:border-green-500 text-gray-400"}`}
+              className={`py-1 pl-2 border-l-2 border-gray-500 group-hover:border-blue-500 group-hover:border-l-3 group-hover:cursor-pointer group-active:border-cyan-500 group-active:text-gray-400 w-full text-start transition-all duration-40 ${task.completed && "line-through border-green-500 group-hover:border-green-500 text-gray-400"}`}
             >
             {task.title}
             </button>

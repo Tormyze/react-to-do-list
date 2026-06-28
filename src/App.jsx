@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import AddTask from "./components/AddTask";
 import TaskList from "./components/TaskList";
+import Title from "./components/Title";
 
 function App() {
   const [tasks, setTasks] = useState( JSON.parse(localStorage.getItem('tasks')) || [] );
@@ -45,18 +46,25 @@ function App() {
     console.log([...tasks, nTask]);
   }
 
-  {/* Atualiza o localStorage */}
+  // Atualiza o localStorage
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
   }, [tasks])
 
+  // Simulação com dados de API (tire dos comentários para testar)
+    // useEffect(() => {
+    //   const fetchTodos = async () => {
+    //     const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
+    //     const data = await response.json()
+    //     setTasks(data)
+    //   }
+    //   fetchTodos()
+    // }, [])
+
   return (
-    <div className="w-full min-h-screen bg-linear-to-b from-gray-800 to-gray-950 flex flex-col justify-center items-center text-gray-100 md:justify-start md:py-12">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-medium font-stack text-shadow-lg text-shadow-black hover:cursor-default py-6 px-10 md:pb-10">
-        A Modern <span className="text-blue-500">React</span> To
-        Do List
-      </h1>
-      <div className="w-full flex flex-col items-center gap-2 mb-20">
+    <main className="w-full min-h-screen bg-linear-to-b from-gray-800 to-gray-950 flex flex-col justify-center items-center text-gray-100 md:justify-start md:py-12">
+      <Title>A Modern <span className="text-blue-500">React</span> To Do List</Title>
+      <section className="w-full flex flex-col items-center gap-2 mb-20">
         <AddTask onAddTask={onAddTask} />
         {tasks.length > 0 ? (
           <> {/* React Fragment - é uma tag vazia (<>) que só serve para envolver outras */}
@@ -76,8 +84,8 @@ function App() {
         ) : (
           <p className="text-sm md:text-xl mt-1 text-gray-500 hover:cursor-default">Create your <span className="text-blue-500">first task</span>!</p>
         )}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
