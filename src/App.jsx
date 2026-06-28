@@ -1,23 +1,10 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddTask from "./components/AddTask";
 import TaskList from "./components/TaskList";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Learn React",
-      desc: "Learn the basics of React",
-      completed: false,
-    },
-    {
-      id: 2,
-      title: "Build a To Do List",
-      desc: "Create a simple to-do list application with nice functions and great visuals",
-      completed: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState( JSON.parse(localStorage.getItem('tasks')) || [] );
 
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
@@ -55,12 +42,17 @@ function App() {
     }
 
     setTasks([...tasks, nTask]);
-    console.log([...tasks, nTask])
+    console.log([...tasks, nTask]);
   }
+
+  {/* Atualiza o localStorage */}
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
 
   return (
     <div className="w-full min-h-screen space-y-12 py-12 bg-linear-to-b from-gray-800 to-gray-950 flex flex-col items-center text-gray-100">
-      <h1 className="text-6xl text-center font-medium font-stack text-shadow-lg text-shadow-black">
+      <h1 className="text-6xl text-center font-medium font-stack text-shadow-lg text-shadow-black hover:cursor-default px-10">
         A Modern <span className="text-blue-500">React</span> To
         Do List
       </h1>
