@@ -2,7 +2,7 @@ import { ChevronDown, ChevronUp, Trash } from "lucide-react";
 
 function TaskList({ tasks, onTaskClick, onDetailsClick, onDeleteClick }) {
   return (
-    <ul className="w-1/2 space-y-2 bg-gray-800 rounded-lg p-4 inset-shadow-sm inset-shadow-gray-700/50">
+    <ul className="w-3/5 lg:w-1/2 space-y-2 bg-gray-800 rounded-lg p-4 inset-shadow-sm inset-shadow-gray-700/50">
       {tasks.map((task) => (
         <li key={task.id} className="group">
           <div onContextMenu={(e) => e.preventDefault()} onClick={(e) => e.ctrlKey && onDeleteClick(task.id)} className='flex justify-between'>

@@ -51,8 +51,8 @@ function App() {
   }, [tasks])
 
   return (
-    <div className="w-full min-h-screen space-y-12 py-12 bg-linear-to-b from-gray-800 to-gray-950 flex flex-col items-center text-gray-100">
-      <h1 className="text-6xl text-center font-medium font-stack text-shadow-lg text-shadow-black hover:cursor-default px-10">
+    <div className="w-full min-h-screen bg-linear-to-b from-gray-800 to-gray-950 flex flex-col justify-center items-center text-gray-100 md:justify-start md:py-12">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-medium font-stack text-shadow-lg text-shadow-black hover:cursor-default py-6 px-10 md:pb-10">
         A Modern <span className="text-blue-500">React</span> To
         Do List
       </h1>
@@ -74,7 +74,7 @@ function App() {
             </p>
           </>
         ) : (
-          <p className="text-xl mt-1 text-gray-500 hover:cursor-default">Create your <span className="text-blue-500">first task</span>!</p>
+          <p className="text-sm md:text-xl mt-1 text-gray-500 hover:cursor-default">Create your <span className="text-blue-500">first task</span>!</p>
         )}
       </div>
     </div>
