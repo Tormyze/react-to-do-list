@@ -1,43 +1,45 @@
-# 📔Lista de Tarefas - React
+# 📔 To-Do List - React
 
-Projeto completo de uma **lista de tarefas** funcional, desenvolvida totalmente em ⚛️**React**.
+> 🔗 Documento em [Português BR](./README.pt-br.md)
+
+A complete and functional **to-do list application** built entirely with ⚛️ **React**.
 
 ![Thumb](https://github.com/user-attachments/assets/4d467571-aa87-45c9-827f-52cb471fd768)
 
-🔗 Acesse o projeto online: [To Do List](https://react-to-do-list-nine-opal.vercel.app)
+🔗 Access the live project: [To Do List](https://react-to-do-list-nine-opal.vercel.app)
 
 ---
 
-## 🚀 Sobre o projeto
+## 🚀 About the Project
 
-A lista de tarefas permite **organizar sua rotina** com a criação de notas em um ambiente virtual **simples**, **responsivo** e com **design altamente moderno**.
+This to-do list allows users to **organize their daily routine** by creating tasks in a **simple**, **responsive**, and **highly modern design** environment.
 
-Desenvolvida com a possibilidade de **adição** e **remoção** de tarefas, visualização de detalhes, **atalhos de teclado** focados em aspectos **UI/UX** de qualidade, **responsividade** em telas menores, **validação de entradas vazias** e muito mais.
+Developed with core features including **adding** and **removing** tasks, viewing task details, **keyboard shortcuts** focused on high-quality **UI/UX** aspects, **responsiveness** for smaller screens, **empty input validation**, and much more.
 
-## 🧬 Idealização
+## 🧬 Project Goals
 
-O projeto surgiu à partir do objetivo de construir uma introdução na **aprendizagem** e **implementação** do framework Front-end ⚛️**React**, tendo como sua base a criação e estruturação de componentes, desenvolvendo a página de forma modular.
+The project was created to serve as an introduction to **learning** and **implementing** the ⚛️ **React** front-end framework. Its foundation relies on component creation and rendering pages in a clean, modular structure.
 
-## 🛠️ Tecnologias
+## 🛠️ Technologies
 
-**Linguagens** e **tecnologias** utilizadas na construção do projeto:
+**Languages** and **technologies** used to build this project:
 
-![React](https://img.shields.io/badge/Vite-black?logo=vite)
+![Vite](https://img.shields.io/badge/Vite-black?logo=vite)
 ![React](https://img.shields.io/badge/React-black?logo=react)
-![React](https://img.shields.io/badge/Javascript-black?logo=javascript)
-![React](https://img.shields.io/badge/TailwindCss-black?logo=tailwindcss)
-![React](https://img.shields.io/badge/Css3-black?logo=css)
-![React](https://img.shields.io/badge/Html5-black?logo=html5)
-![React](https://img.shields.io/badge/Git-black?logo=git)
+![JavaScript](https://img.shields.io/badge/JavaScript-black?logo=javascript)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-black?logo=tailwindcss)
+![Css](https://img.shields.io/badge/CSS3-black?logo=css)
+![Html](https://img.shields.io/badge/HTML5-black?logo=html5)
+![Git](https://img.shields.io/badge/Git-black?logo=git)
 
 ## ✨ Features
 
-- [x] Criação de tarefas, com título e descrição;
-- [x] Marcação de tarefas completas;
-- [x] Remoção de tarefas;
-- [x] Atalhos para utilização fluida;
-- [x] Responsividade em telas menores;
+- [x] Task creation with custom title and description;
+- [x] Toggle tasks as completed;
+- [x] Task deletion;
+- [x] Keyboard shortcuts for a fluid user experience;
+- [x] Fully responsive layout for smaller screens;
 
 ---
 
-💻 Desenvolvido por Tormyze
+💻 Developed by Tormyze
